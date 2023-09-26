@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial scale=1.0">
+<script>
+    function preventBack() {
+        window.history.forward();
+    }
+</script>
+
+<title>
+</title>
+<style>
+body
+{ 
+	background-color: rgb(47, 2, 124);
+}
+#bg1
+{
+	background-image: url(i-3.png);
+    background-repeat: no-repeat;
+}
+#bg2
+{
+	background-image: url(i-4.png);
+    height: 120px;
+    background-repeat: no-repeat;
+}
+#bg3
+{
+    background-image: url(i-5.png);
+    height: 110px;
+    background-repeat: no-repeat;
+}
+#bg4
+{
+    background-image: url(i-2\(2-1\).png);
+    height: 385px;
+    background-repeat: no-repeat;
+}
+p{
+	background-color:rgb(45, 247, 163);
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+  }
+  .table
+  {
+	  background-image: url(BG-1.gif);
+	  border-radius:20px;
+	  margin-top: 30px;
+	  margin-left: 10px;
+  }
+#sub
+{
+	background-color:deepskyblue ;
+	font-weight:900;
+	font-size:20px;
+	border-radius:20px;
+	border-color:rgb(248, 139, 5);
+	border-width: 6px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input
+{
+	background-color:rgb(26, 223, 230);
+	font-weight:1000;
+	font-size:15px;
+	border-radius:1px;
+	border-color:rgb(8, 8, 8);
+}
+#hint
+{
+	position:absolute;
+	text-align:top;
+    font-size: 20px;
+	font-weight: 1000;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mydiv
+{
+	background-image: url(p11.png) ;
+	background-repeat: no-repeat;
+	background-size: 140px,200px;
+	font-size:50px;
+	font-weight:100px;
+	text-align:left;
+	font-style:italic;	
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	height: 54px;
+	width: 140px;
+	background-color:lightseagreen;
+}
+</style>
+</head>
+<body id="next"  onkeydown="return (event.keyCode != 116)">
+<form>
+
+<table  class ="table">
+	<tr>
+		<td>
+			<p id="demo"></p>
+<script>
+	function preventBack() {
+        window.history.forward();
+    }
+
+    setTimeout("preventBack()", 0);
+    window.onunload = function() {
+        null
+    };
+var countDownDate = new Date("Sep 27, 2023 11:45:00").getTime();
+var x = setInterval(function() {
+  
+var now = new Date().getTime();
+	
+
+  var distance = countDownDate - now;
+	
+
+  
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+  
+  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+   
+  if (distance < 0) {
+	window.location="gameover.html";
+  }
+	
+}, 1000);
+</script>
+			
+		</td>
+	</tr>
+	
+</table>
+<table align="center" border="4">
+    <tr>
+        <td align="left">
+            <img src="i-1(3).png">
+        </td>
+    </tr>
+    <tr>
+        <td align="left" id="bg4">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg1">
+			<input type="text" id="input">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg2">
+            <button onclick="myfunc()" id="sub">>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg3">
+            <a id="hint" href="hunt(hint-1-1(3)).html">HINT
+			</a>  
+        </td>
+    </tr>
+    
+</table>
+	</button>	
+	<script>
+        alert("YOU HAVE LOST 2 HEARTS");
+		function myfunc()
+		{
+			let ip=document.getElementById("input").value;
+				let x;
+				if(ip=='SEO'||ip=='seo'||ip=='Seo'||ip=='S.E.O'||ip=='s.e.o')
+				{
+					x=document.location="STM-3(intro).html";
+				}
+				else
+				{
+					x=document.location="gameover.html";
+				}
+				document.getElementById("next").innerHTML=x;
+			
+		}
+		
+		</script>
+		</form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> 
+    
+    <head>
+        <script>
+            function preventBack() {
+                window.history.forward();
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+       #mvb
+        {
+            background-color:yellow;
+            font-weight: 600;
+            font-size: 19px;
+            
+        }
+        #p2
+            {
+             
+                background-image: url(giphy.gif);
+                background-size: cover;
+                height: 15px;
+                width: 15px;
+                border: none;
+            }
+        </style>
+    </head>
+
+    <script src="script.js">
+    </script>
+    <script>
+		function redirect()
+		{
+		   document.location="STM-4(1)(intro).html";
+		}
+   </script>
+	 <button onclick="redirect()"id="p2">> 
+	</button>
+    <body id="next"  onkeydown="return (event.keyCode != 116)">
+        <br>
+        <div id="board">
+        </div>
+        <br>
+        <div id="pieces">
+        </div>
+	  <table border="3" align="center" id="mvb">
+		<tr>
+			<td>
+				Solve this puzzle correctly and you will find the answer to the riddle.
+			</td>
+		</tr>
+        <tr align="center">
+            <td>
+                See and follow the arrow after solving the puzzle.
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                And SEE carefully about the true answer.
+            </td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td>
+                <a href="hunt(4(1-3)).html" id="mvb">CLICK TO MOVE BACK
+                </a>
+            </td>
+        </tr>
+	  </table>
+      
+        
+    </body>
+</html>

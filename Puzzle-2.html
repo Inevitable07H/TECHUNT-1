@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function preventBack() {
+            window.history.forward();
+        }
+    </script>
+<style>
+#home
+{
+	position:fixed;
+	min-width:36%;
+	max-width:35%;
+    margin-top:30px;
+    margin-right:100px;
+    margin-left:500px;
+}
+body
+{
+    background-image:url(bg-1.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+</style>
+</head>
+<body id="next"  onkeydown="return (event.keyCode != 116)">
+    <script> function redirect(){
+        document.location="Puzzle-2(1).html";}
+        </script>
+
+    <video autoplay muted id="home" onended="redirect()">
+    <source src="1.mp4" type="  video/mp4">
+    </video>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body
+        {
+            background-image: url(regp.gif);
+            background-size: 1538px,1500px;
+            background-repeat: no-repeat;
+        }
+       
+        #tdes1
+        {
+            background-color: rgb(44, 161, 239);
+            border-color: gold;
+            size: 20px;
+            border-width:10px;
+            border-radius: 5px;
+            margin-top: 200px;
+            box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.5);
+        }
+        
+        #dect
+        {
+            color:black;
+            text-decoration:underline;
+            font-family:'Times New Roman', Times, serif;
+            font-size:45px;
+            margin-top: 170px;
+        }
+        #dect1
+        {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic ;
+            font-weight:1000 ;
+            font-size:20px;
+        }
+        #ipb
+        {
+            background-color: aquamarine;
+            border-color:yellow;
+            border-radius: 5px;
+	        font-weight:1000 	;
+	        font-size:15px;
+        }
+        #ipb1
+        {
+            background-color:darkorange;
+            border-color:yellow;
+            border-radius: 5px;
+	        font-weight:1000 	;
+	        font-size:15px;
+        }
+    </style>    
+    
+</head>
+<body>
+<form action="POST" name="google-sheet">
+   
+    <table align="center" id="tdes1" border="1">
+    <tr align="center">
+        <td colspan="2" id="dect">
+            REGISTRATION        
+        </td>
+    </tr>    
+            <tr align="left">
+            <td id="dect1">
+                NAME-1:
+            </td>
+            <td align="left">   
+                 <input type="text" name="Name" placeholder="FIRST PARTICIPANT" id="ipb" required><br><br>
+            </td>
+        </tr>
+        <td id="dect1">
+            NAME-2:
+        </td>
+        <td align="left">   
+             <input type="text" name="Name" placeholder="SECOND PARTICIPANT" id="ipb" required><br><br>
+        </td>
+    </tr>
+    <tr>
+        <td id="dect1"> 
+            EMAIL-1:
+        </td>
+        <td id="dect1">
+            <input type="email" name="Email" placeholder="FIRST PARTICIPANT" id="ipb" required><br><br>
+        </td>
+    </tr>
+    <tr>
+        <td id="dect1"> 
+            EMAIL-2:
+        </td>
+        <td id="dect1">
+            <input type="email" name="Email" placeholder="SECOND PARTICIPANT" id="ipb" required><br><br>
+        </td>
+    </tr>
+    <tr>
+        <td id="dect1">
+            CLASS-1:
+        </td>
+        <td>
+            <input type="text" name="Class" placeholder="FIRST PARTICIPANT" id="ipb" required><br><br>
+             
+        </td>
+    </tr>
+    <tr>
+        <td id="dect1">
+            CLASS-2:
+        </td>
+        <td>
+            <input type="text" name="Class" placeholder="SECOND PARTICIPANT" id="ipb" required><br><br>      
+        </td>
+    </tr>
+    
+        
+
+        <tr align="center">
+            
+            <td colspan="2">
+                <a href="home(hunt).html">
+                <input type="submit" name="submit" value="SUBMIT" id="ipb1">
+                </a>
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => document.location="home(hunt).html")
+            .catch(error => console.error('Error!', error.message))
+        })
+   
+       function myfunc()
+       {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Record Saved Get Ready To Play The Adventure"))
+            .catch(error => console.error('Error!', error.message))
+        })
+        
+       }
+    </script>
+</form>
+</body>
+</html>

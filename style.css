@@ -1,0 +1,51 @@
+body
+{
+    background-color:aqua;
+}
+#board
+{
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#board img
+{
+    width: 98.4px;
+    height: 97.6px;
+    border: 1px solid black;
+}
+
+#pieces
+{
+    width: 690px;
+    height: 78px;
+    border: 3px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pieces img
+{
+    width: 75px;
+    height: 75px;
+    border: 0.8px solid cyan;
+
+}
+
+#tab
+{
+	background-color:yellow;
+	margin-top:100px;
+	margin-left:490px;
+	border-color:blue;
+	border-radius:4px;
+}
+#font
+{
+	font-size:20px;
+	font-weight:900px
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vighnesh Chejara(A-08)</title>
+    <style>
+
+body{
+    background-color:#3b7bb8;
+}
+h2{
+    text-align: center;
+    font-family:Cooper Black;
+    font-size: 60px;
+    color:#f7f77c;
+}
+.calculator {
+background-color:#0ceb56;
+height: 500px;
+width:380px;
+padding: 5px;
+text-align: center;
+margin: auto;
+border-radius: 30px;
+}
+.display-box {
+
+    width: 400px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	color:white;
+	text-align: right;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0 25px;
+}
+.display-boxtd{
+    height:100px ;
+    background-color:#2a2d2e;
+    border-radius: 20px;
+}
+.button {
+    width: 60px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	background:#05dff7;
+	border: none;
+	font-size: 50px;
+	line-height: 30px;
+	border-radius: 50%;
+	font-weight: 700;
+	color: #392a2a;
+	border-top:white 5px solid;
+
+}
+.button:active {
+	background: #3b5da2;
+
+}
+#boxdisp
+{
+    border-color: #0ceb56;
+    font-weight: 600;
+    font-size: 19px;
+    background-color:rgb(247, 135, 16);
+}
+#mvb
+{
+    background-color:#0ceb56;
+    font-weight: 600;
+    font-size: 19px;
+   
+}
+    </style>
+</head>
+<body>
+    <script>
+        function display(val){
+            let a1=document.getElementById("result");
+            //only 10 characters
+            if(a1.value.length==14){
+                a1.value=a1.value;
+            }
+            else{
+            a1.value+=val;
+            let op1=a1.value.charAt(a1.value.length-1);
+            let op2=a1.value.charAt(a1.value.length-2);
+            //check for multiple operators
+            if(op2=='+'||op2=='-'||op2=='*'||op2=='/'){
+                if(op1=='+'||op1=='-'||op1=='*'||op1=='/'){
+                    a1.value=a1.value.substring(0,a1.value.length-1);
+                }
+            }
+        }
+        }
+        function solve(){
+            let exp=document.getElementById("result").value;
+            //if last character in the expression is operator
+            let ch=exp.charAt(exp.length-1);
+            if(ch=='+'||ch=='-'||ch=='*'||ch=='/'){
+                exp=exp.substring(0,exp.length-1);
+            }
+            let res=eval(exp);
+            document.getElementById("result").value=res;
+        }
+    </script>
+    <h2>Calculator</h2>
+    <form>
+        <table class="calculator" cellspacing="7px">
+            <tr>
+                <td colspan="4" class="display-boxtd"><input type="text" class="display-box" id="result" maxlength="10"disabled ></td>
+            </tr>
+            <div class="buttons">
+            <tr>
+                <td><input type="button" class = "button" value="7" onclick="display('7')"></td>
+                <td><input type="button" class = "button" value="8" onclick="display('8')"></td>
+                <td><input type="button" class = "button"value="9" onclick="display('9')"></td>
+                <td><input type="button" class = "button"value="+" onclick="display('+')"></td>
+            </tr>   
+            <tr>
+                <td><input type="button" class = "button"value="4" onclick="display('4')"></td>
+                <td><input type="button" class = "button"value="5"onclick="display('5')"></td>
+                <td><input type="button" class = "button"value="6"onclick="display('6')"></td>
+                <td><input type="button" class = "button"value="-"onclick="display('-')"></td>
+            </tr>     
+            <tr>
+                <td><input type="button" class = "button"value="1"onclick="display('1')"></td>
+                <td><input type="button" class = "button"value="2"onclick="display('2')"></td>
+                <td><input type="button" class = "button"value="3"onclick="display('3')"></td>
+                <td><input type="button" class = "button"value="*"onclick="display('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" class = "button"value="C"></td>
+                <td><input type="button" class = "button"value="0"onclick="display('0')"></td>
+                <td><input type="button" class = "button"value="=" onclick="solve()"></td>
+                <td><input type="button" class = "button"value="/"onclick="display('/')"></td>
+            </tr>
+        </div>
+        </table>
+
+	<table align="center">
+            <tr>
+                <td>
+			<a href="hunt(2).html" id="mvb">CLICK TO MOVE BACK
+           		 </a>
+            
+                </td>
+            </tr>
+	</table>
+        <table border="4" align="center" id="boxdisp">    
+	    <tr>
+                <td>
+                    1 K = 1 Kilo Bytes = 1024 Bytes
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1 M = 1 Mega Bytes = 1024 Kilo Bytes
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1 G = 1 Giga Bytes = 1024 Mega Bytes
+                </td>
+            </tr>
+            
+            </table>
+        
+    </form>
+</body>
+</html>

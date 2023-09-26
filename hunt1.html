@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial scale=1.0">
+<script>
+    function preventBack() {
+        window.history.forward();
+    }
+</script>
+
+<title>
+</title>
+<style>
+body
+{ 
+	background-color: rgb(47, 2, 124);
+}
+#bg1
+{
+	background-image: url(i-3.png);
+    background-repeat: no-repeat;
+}
+#bg2
+{
+	background-image: url(i-4.png);
+    height: 120px;
+    background-repeat: no-repeat;
+}
+#bg3
+{
+    background-image: url(i-5.png);
+    height: 110px;
+    background-repeat: no-repeat;
+}
+#bg4
+{
+    background-image: url(i-2.png);
+    height: 348px;
+    background-repeat: no-repeat;
+}
+p{
+	background-color:rgb(45, 247, 163);
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+  }
+  .table
+  {
+	  background-image: url(BG-1.gif);
+	  border-radius:20px;
+	  margin-top: 30px;
+	  margin-left: 10px;
+  }
+#sub
+{
+	background-color:deepskyblue ;
+	font-weight:900;
+	font-size:20px;
+	border-radius:20px;
+	border-color:rgb(248, 139, 5);
+	border-width: 6px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input
+{
+	background-color:rgb(26, 223, 230);
+	font-weight:1000;
+	font-size:15px;
+	border-radius:1px;
+	border-color:rgb(8, 8, 8);
+}
+#hint
+{
+	position:absolute;
+	text-align:top;
+    font-size: 20px;
+	font-weight: 1000;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mydiv
+{
+	background-image: url(p11.png) ;
+	background-repeat: no-repeat;
+	background-size: 140px,200px;
+	font-size:50px;
+	font-weight:100px;
+	text-align:left;
+	font-style:italic;	
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	height: 54px;
+	width: 140px;
+	background-color:lightseagreen;
+}
+</style>
+</head>
+<body id="next"  onkeydown="return (event.keyCode != 116)">
+<form id="ans">
+
+<table  class ="table">
+	<tr>
+		<td>
+			<p id="demo"></p>
+<script>
+	function preventBack() {
+        window.history.forward();
+    }
+
+    setTimeout("preventBack()", 0);
+    window.onunload = function() {
+        null
+    };
+var countDownDate = new Date("Sep 27, 2023 11:45:00").getTime();
+var x = setInterval(function() {
+  
+var now = new Date().getTime();
+	
+
+  var distance = countDownDate - now;
+	
+
+  
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+  
+  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+   
+  if (distance < 0) {
+	window.location="gameover.html";
+  }
+	
+}, 1000);
+</script>
+			
+		</td>
+	</tr>
+	
+</table>
+<table align="center" border="4">
+    <tr>
+        <td align="left">
+            <img src="i-1.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="left" id="bg4">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg1">
+            <input type="text" id="text" name="FirstAns" size="25px">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg2">
+            <input type="submit" onclick="myfunc()" id="sub" name="sub" value=">">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" id="bg3">
+            <abbr title="I AM THE OPPOSITE OF SCANNING THE STATEMENTS" id="hint">HINT
+            </abbr>
+        </td>
+    </tr>
+    
+</table>
+
+	
+	
+	</button>
+	<script>
+		
+		function myfunc()
+		{
+			
+			let ip=document.getElementById("text").value;
+			let x;
+			
+			if(ip=='Print Statements'||ip=='PRINT STATEMENTS'||ip=='Print Statement'||ip=='PRINT STATEMENT'||ip=='printstatements'||ip=='printstatement'||ip=='printingstatements'||ip=='printingstatement'||ip=='print statements'||ip=='print statement'||ip=='printing statements'||ip=='printing statement'||ip=='printstatement'||ip=='Printing Statements'||ip=='Printing Statement'||ip=='Print Statements'||ip=='Print Statement')
+			{
+				
+				x=document.location="STM-2(intro).html";
+			}
+			
+			else
+			{
+				x=document.location="hunt(1-2).html";
+			}
+			document.getElementById("next").innerHTML=x;
+			
+		}
+		
+		</script>
+	</form>
+			<script type="module">
+				 
+				const addData = async() => {
+					const firebaseEndpoint = 'https://codetech-b3af2-default-rtdb.firebaseio.com/some_collection.json'; // Replace 'some_collection' with your actual collection name
+		
+					const dataToSend = {
+					key1: 'value1',
+					key2: 'value2',
+					// Add more key-value pairs as needed
+					};
+		
+					const response = await fetch(firebaseEndpoint, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json', // Specify that you're sending JSON data
+					},
+					body: JSON.stringify(dataToSend), // Convert your data to JSON format
+					});
+		
+					if (response.ok) {
+					// Request was successful (status code 200)
+					const responseData = await response.json();
+					console.log('Data sent successfully:', responseData);
+					} else {
+					// Request failed, handle the error
+					console.error('Error:', response.status, response.statusText);
+					}
+		
+				}
+							
+						
+		  </script>
+</body>
+</html>
