@@ -94,7 +94,7 @@ input
 </style>
 </head>
 <body id="next"  onkeydown="return (event.keyCode != 116)">
-<form id="ans">
+<form id="ans" name="google-sheet">
 
 <table  class ="table">
 	<tr>
@@ -148,7 +148,7 @@ var now = new Date().getTime();
     </tr>
     <tr>
         <td align="center" id="bg1">
-            <input type="text" id="text" name="FirstAns" size="25px"autocomplete="off">
+            <input type="text" id="text" name="Fans" size="25px"autocomplete="off">
         </td>
     </tr>
     <tr>
@@ -192,37 +192,30 @@ var now = new Date().getTime();
 		
 		</script>
 	</form>
-			<script type="module">
-				 
-				const addData = async() => {
-					const firebaseEndpoint = 'https://codetech-b3af2-default-rtdb.firebaseio.com/some_collection.json'; // Replace 'some_collection' with your actual collection name
-		
-					const dataToSend = {
-					key1: 'value1',
-					key2: 'value2',
-					// Add more key-value pairs as needed
-					};
-		
-					const response = await fetch(firebaseEndpoint, {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json', // Specify that you're sending JSON data
-					},
-					body: JSON.stringify(dataToSend), // Convert your data to JSON format
-					});
-		
-					if (response.ok) {
-					// Request was successful (status code 200)
-					const responseData = await response.json();
-					console.log('Data sent successfully:', responseData);
-					} else {
-					// Request failed, handle the error
-					console.error('Error:', response.status, response.statusText);
-					}
-		
-				}
-							
-						
-		  </script>
+			<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => myfunc())
+            .catch(error => console.error('Error!', error.message))
+        })
+   
+       function myfunc()
+       {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Record Saved Get Ready To Play The Adventure"))
+            .catch(error => console.error('Error!', error.message))
+        })
+        
+       }
+    </script>
 </body>
 </html>
