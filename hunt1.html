@@ -192,30 +192,6 @@ var now = new Date().getTime();
 		
 		</script>
 	</form>
-			<script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
-        const form = document.forms['google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => myfunc())
-            .catch(error => console.error('Error!', error.message))
-        })
-   
-       function myfunc()
-       {
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAh9vPUdrxEW3pxoft1_nT_557XekGHHqTrx2zlhOh7Wrg8rfR0_FxkZgqX6TjIg_U/exec'
-        const form = document.forms['google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Record Saved Get Ready To Play The Adventure"))
-            .catch(error => console.error('Error!', error.message))
-        })
-        
-       }
-    </script>
+			
 </body>
 </html>
